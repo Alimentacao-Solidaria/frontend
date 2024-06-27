@@ -10,14 +10,12 @@ const Navbar = () => {
             <img className="h-16 w-16 rounded-full" src={Logo} alt="Logo" />
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <a href="/" className="text-gray-900 hover:text-gray-700">
-              Home
-            </a>
-            <Link to='/sobre' className='"text-gray-900 hover:text-gray-700'>Sobre</Link>
+            <Link to='/home' className="text-gray-900 hover:text-gray-700">Home</Link>
+            <Link to='/sobre' className="text-gray-900 hover:text-gray-700">Sobre</Link>
             <a href="/causes" className="text-gray-900 hover:text-gray-700">
               Equipe
             </a>
-            <Link to='/login' className='"text-gray-900 hover:text-gray-700'>Login</Link>
+            <Link to='/login' className="text-gray-900 hover:text-gray-700">Login</Link>
             <a href="/events" className="text-gray-900 hover:text-gray-700">
               Cadastro
             </a>

@@ -9,20 +9,19 @@ import Home from "./page/home/Home";
 
 function App() {
   return (
-    <>
     <BrowserRouter>
-        <Navbar />
-        <Home />
-          <div className='min-h-[80vh]'>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/sobre" element={<SobreNos />} />
-            </Routes>
-          </div>
-          <Footer />
-        </BrowserRouter>
-    </>
-);
+      <Navbar />
+      <div className='min-h-[80vh]'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sobre" element={<SobreNos />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  );
 }
+
 export default App;
