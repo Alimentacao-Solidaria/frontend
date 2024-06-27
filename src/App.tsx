@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/NavBar';
+import Navbar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './page/login/Login';
+import SobreNos from './paginas/sobre_nos/SobreNos';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/login" element={<Login />} />
+              <Route path="/sobre" element={<SobreNos />} />
             </Routes>
           </div>
           <Footer />
