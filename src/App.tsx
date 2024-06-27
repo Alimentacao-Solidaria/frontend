@@ -4,7 +4,7 @@ import Navbar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './page/login/Login';
-import SobreNos from './paginas/sobre_nos/SobreNos';
+import SobreNos from './page/sobre/SobreNos';
 
 function App() {
   return (

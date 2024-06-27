@@ -1,10 +1,9 @@
-import React from 'react';
 import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react';
 
 function Footer() {
   return (
     <>
-      <div className="flex justify-center bg-white border-b shadow-md mb-4 text-black">
+      <div className="flex justify-center bg-white border-t shadow-md text-black">
         <div className="container flex flex-col items-center py-4">
           <p className='text-xl font-semibold'>Comida, amor & vida - AlimentAção Solidária | Copyright: 2024.</p>
           <p className='text-lg'>Acesse nossas redes sociais</p>
