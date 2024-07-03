@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/test2.jpeg";
 import { AuthContext } from "../../contexts/AutoContext";
 import { useContext } from "react";
 
@@ -16,26 +16,25 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-white border-b shadow-md">
+    <nav className="bg-blue-400 text-white border-b shadow-md  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex-shrink-0 flex items-center gap-2 ">
             <img className="h-16 w-16 rounded-full" src={Logo} alt="Logo" />
+            <span>alimentação solidaria</span>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link to="/home" className="text-gray-900 hover:text-gray-700">
+            <Link to="/" className=" hover:text-gray-700">
               Home
             </Link>
-            <Link to="/sobre" className="text-gray-900 hover:text-gray-700">
-              Sobre
-            </Link>
-            <a href="/causes" className="text-gray-900 hover:text-gray-700">
+
+            <a href="/causes" className=" hover:text-gray-700">
               Equipe
             </a>
-            <Link to="/login" className="text-gray-900 hover:text-gray-700">
+            <Link to="/login" className=" hover:text-gray-700">
               Login
             </Link>
-            <a href="/cadastro" className="text-gray-900 hover:text-gray-700">
+            <a href="/cadastro" className=" hover:text-gray-700">
               Cadastro
             </a>
 
