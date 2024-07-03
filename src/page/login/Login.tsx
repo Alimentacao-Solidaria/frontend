@@ -35,72 +35,75 @@ function Login() {
     e.preventDefault();
     handleLogin(usuarioLogin);
   }
-
   return (
-    <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-        <form
-          className="flex justify-center items-center flex-col w-1/2 gap-4"
-          onSubmit={login}
-        >
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+    <div className="flex h-screen w-screen items-center overflow-hidden px-2">
+      <div className="relative flex w-96 flex-col space-y-5 rounded-lg border bg-white px-5 py-10 shadow-xl sm:mx-auto">
+        <div className="-z-10 absolute top-5 left-1/2 h-full w-5/6 -translate-x-1/2 rounded-lg bg-blue-400 sm:-right-5 sm:top-5 sm:left-auto sm:w-full sm:translate-x-0"></div>
+        <div className="mx-auto mb-2 space-y-3">
+          <h1 className="text-center text-3xl font-bold text-gray-700">Entrar</h1>
+        </div>
+        <form className="space-y-5" onSubmit={login}>
+          <div className="relative mt-2 w-full">
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuarioLogin.usuario}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
+            <label
+              htmlFor="usuario"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Usuário
+            </label>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+          <div className="relative mt-2 w-full">
             <input
               type="password"
               id="senha"
               name="senha"
-              placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuarioLogin.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
+            <label
+              htmlFor="senha"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Senha
+            </label>
           </div>
-          <button
-            type="submit"
-            className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center"
-          >
-            {isLoading ? (
-              <RotatingLines
-                strokeColor="white"
-                strokeWidth="5"
-                animationDuration="0.75"
-                width="24"
-                visible={true}
-              />
-            ) : (
-              <span>Entrar</span>
-            )}
-          </button>
-
-          <hr className="border-slate-800 w-full" />
-
-          <p>
+          <div className="flex w-full justify-center items-center">
+            <button
+              type="submit"
+              className="inline-flex w-36 items-center justify-center rounded-lg bg-blue-600 py-3 font-bold text-white"
+            >
+              {isLoading ? (
+                <RotatingLines
+                  strokeColor="white"
+                  strokeWidth="5"
+                  animationDuration="0.75"
+                  width="24"
+                  visible={true}
+                />
+              ) : (
+                <span>Entrar</span>
+              )}
+            </button>
+          </div>
+          <p className="text-center text-gray-600">
             Ainda não tem uma conta?{" "}
-            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+            <Link to="/cadastro" className="whitespace-nowrap font-semibold text-gray-900 hover:underline">
               Cadastre-se
             </Link>
           </p>
         </form>
-        <div className="fundoLogin hidden lg:block"></div>
       </div>
-    </>
+    </div>
   );
 }
 
