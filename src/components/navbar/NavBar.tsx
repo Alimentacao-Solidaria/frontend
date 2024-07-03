@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import { AuthContext } from "../../contexts/AutoContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const { handleLogout } = useContext(AuthContext);
+
+  function logout() {
+    handleLogout();
+    alert("Usuário deslogado com sucesso");
+    navigate("/");
+  }
+
   return (
     <nav className="bg-white border-b shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,15 +23,25 @@ const Navbar = () => {
             <img className="h-16 w-16 rounded-full" src={Logo} alt="Logo" />
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link to='/home' className="text-gray-900 hover:text-gray-700">Home</Link>
-            <Link to='/sobre' className="text-gray-900 hover:text-gray-700">Sobre</Link>
+            <Link to="/home" className="text-gray-900 hover:text-gray-700">
+              Home
+            </Link>
+            <Link to="/sobre" className="text-gray-900 hover:text-gray-700">
+              Sobre
+            </Link>
             <a href="/causes" className="text-gray-900 hover:text-gray-700">
               Equipe
             </a>
-            <Link to='/login' className="text-gray-900 hover:text-gray-700">Login</Link>
+            <Link to="/login" className="text-gray-900 hover:text-gray-700">
+              Login
+            </Link>
             <a href="/cadastro" className="text-gray-900 hover:text-gray-700">
               Cadastro
             </a>
+
+            <Link to="" onClick={logout} className="hover:underline">
+              Sair
+            </Link>
           </div>
           <div>
             <a
