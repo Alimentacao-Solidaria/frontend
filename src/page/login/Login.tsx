@@ -72,7 +72,7 @@ function Login() {
           <div className="flex w-full justify-center items-center">
             <button
               type="submit"
-              className="inline-flex w-36 items-center justify-center rounded-lg bg-blue-600 py-3 font-bold text-white"
+              className="inline-flex w-36 items-center justify-center rounded-lg bg-blue-600 hover:bg-blue-400 py-3 font-bold text-white"
             >
               {isLoading ? (
                 <RotatingLines
@@ -91,7 +91,7 @@ function Login() {
             Ainda não tem uma conta?{" "}
             <Link
               to="/cadastro"
-              className="whitespace-nowrap font-semibold text-gray-900 hover:underline"
+              className="whitespace-nowrap font-semibold text-gray-900 hover:text-blue-600"
             >
               Cadastre-se
             </Link>

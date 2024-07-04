@@ -2,7 +2,6 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Usuario from "../../model/Usuario";
 import { cadastrarUsuario } from "../../services/Service";
-// import "./Cadastro.css";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -68,93 +67,107 @@ function Cadastro() {
   }
 
   return (
-    <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-        <div className="fundoCadastro hidden lg:block"></div>
-        <form
-          className="flex justify-center items-center flex-col w-2/3 gap-3"
-          onSubmit={cadastrarNovoUsuario}
-        >
-          <h2 className="text-slate-900 text-5xl">Cadastrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="nome">Nome</label>
+    <div className="flex h-screen items-center">
+      <div className="relative flex w-full max-w-md mx-auto flex-col space-y-3 space-x-2 rounded-lg border bg-white px-9 py-10 shadow-xl">
+        <div className="-z-10 absolute top-5 left-1/2 h-full w-5/6 -translate-x-1/2 rounded-lg bg-blue-100 sm:-right-5 sm:top-5 sm:left-auto sm:w-full sm:translate-x-0"></div>
+        <div className="mx-auto mb-2 space-y-3">
+          <h1 className="text-center text-3xl font-bold text-gray-700">Cadastrar</h1>
+        </div>
+        <form className="space-y-5" onSubmit={cadastrarNovoUsuario}>
+          <div className="relative mt-2 w-full">
             <input
               type="text"
               id="nome"
               name="nome"
-              placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuario.nome}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={atualizarEstado}
             />
+            <label
+              htmlFor="nome"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Nome
+            </label>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
+          <div className="relative mt-2 w-full">
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuario.usuario}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={atualizarEstado}
             />
+            <label
+              htmlFor="usuario"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Usuário
+            </label>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="foto">Foto</label>
+          <div className="relative mt-2 w-full">
             <input
               type="text"
               id="foto"
               name="foto"
-              placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuario.foto}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={atualizarEstado}
             />
+            <label
+              htmlFor="foto"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Foto
+            </label>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+          <div className="relative mt-2 w-full">
             <input
               type="password"
               id="senha"
               name="senha"
-              placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={usuario.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                atualizarEstado(e)
-              }
+              onChange={atualizarEstado}
             />
+            <label
+              htmlFor="senha"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Senha
+            </label>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="confirmarSenha">Confirmar Senha</label>
+          <div className="relative mt-2 w-full">
             <input
               type="password"
               id="confirmarSenha"
               name="confirmarSenha"
-              placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              placeholder=" "
+              className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
               value={confirmaSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                handleConfirmarSenha(e)
-              }
+              onChange={handleConfirmarSenha}
             />
+            <label
+              htmlFor="confirmarSenha"
+              className="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300"
+            >
+              Confirmar Senha
+            </label>
           </div>
-          <div className="flex justify-around w-full gap-8">
+          <div className="flex w-full justify-center items-center space-x-4">
             <button
-              className="rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2"
+              className="inline-flex w-36 items-center justify-center rounded-lg bg-gray-500 hover:bg-gray-700 py-3 font-bold text-white"
               onClick={back}
             >
               Cancelar
             </button>
             <button
-              className="rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2"
+              className="inline-flex w-36 items-center justify-center rounded-lg bg-blue-600 hover:bg-blue-400 py-3 font-bold text-white"
               type="submit"
             >
               Cadastrar
@@ -162,8 +175,7 @@ function Cadastro() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
-
 export default Cadastro;
