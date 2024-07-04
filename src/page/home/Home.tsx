@@ -4,13 +4,13 @@ import "./Home.css";
 function Home() {
   return (
     <>
-      <div className="bg-red-600 h-72 flex items-center text-center  text-white ">
-        <div className=" p-10 ">
-          <span className="text-5xl font-sans">
+      <div className="bg-red-600 h-60 flex items-center text-center text-white">
+        <div className="p-6">
+          <span className="text-3xl font-sans">
             15.1 POR 1.000 NASCIDOS VIVOS FOI A TAXA DE MORTALIDADE INFANTIL EM
             RORAIMA EM 2019​​.
           </span>
-          <h6>*World Bank Open Data</h6>
+          <h6 className="text-sm mt-2">*World Bank Open Data</h6>
         </div>
       </div>
       <div className="flex justify-center items-center p-2">
@@ -19,7 +19,7 @@ function Home() {
         </h2>
       </div>
 
-      <div className="flex grid grid-cols-3">
+      <div className="flex grid grid-cols-3 gap-4">
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">1. Prevenção e Cuidado</div>
