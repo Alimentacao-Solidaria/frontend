@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/test2.jpeg";
-import { AuthContext } from "../../contexts/AutoContext";
+import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";

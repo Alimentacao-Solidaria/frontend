@@ -3,7 +3,7 @@ export default interface Produtos {
   nomeProduto: string,
   descricaoProduto:string,
   preco: number,
-  quantidade: 10,
+  quantidade: number,
   foto: string
   categoria: {
     id: number
