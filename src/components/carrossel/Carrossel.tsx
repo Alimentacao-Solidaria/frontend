@@ -27,13 +27,13 @@ function AutoPlay() {
       className="relative h-96 max-h-96 bg-cover bg-center bg-no-repeat justify-center items-center  object-cover item"
       data-value="2"
     >
-
       <img src={src} alt="" />
 
       <div className="absolute inset-0 bg-blue-500 opacity-50 clip-diagonal" />
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-white text-lg md:text-xl lg:text-5xl font-bold ">
           Dê uma mão amiga envolva-se
+
         </h1>
       </div>
     </div>,
