@@ -14,6 +14,9 @@ import ListaProdutos from './page/shop/ListaProdutos';
 import Categoria from './admin/categoria/Categoria';
 import ListaCategoria from './admin/categoria/listaCategoria/ListaCategoria';
 import DeletarCategoria from './admin/categoria/deletarCategoria/DeletarCategoria';
+import FormularioProduto from './admin/produto/formularioProduto/FormularioProduto';
+import ListaProdutosAdm from './admin/produto/listaProdutos/ListaProdutosAdm';
+import DeletarProduto from './admin/produto/deletarProduto/DeletarProduto';
 
 function App() {
   return (
@@ -34,6 +37,10 @@ function App() {
             <Route path="/categoria/editarCategoria/:id" element={<Categoria />} />
             <Route path="/categoria" element={<ListaCategoria />} />
             <Route path="/categoria/deletarCategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/produtos/cadastrarProduto" element={<FormularioProduto />} />
+            <Route path="/produtos/editarProduto/:id" element={<FormularioProduto />} />
+            <Route path="/produtos" element={<ListaProdutosAdm />} />
+            <Route path="/produtos/deletarProduto/:id" element={<DeletarProduto />} />
           </Routes>
         </div>
         <Footer />
