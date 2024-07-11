@@ -4,7 +4,6 @@ import Navbar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './page/login/Login';
-import SobreNos from './page/sobre/SobreNos';
 import Home from "./page/home/Home";
 import Cadastro from './page/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
@@ -17,6 +16,7 @@ import DeletarCategoria from './admin/categoria/deletarCategoria/DeletarCategori
 import FormularioProduto from './admin/produto/formularioProduto/FormularioProduto';
 import ListaProdutosAdm from './admin/produto/listaProdutos/ListaProdutosAdm';
 import DeletarProduto from './admin/produto/deletarProduto/DeletarProduto';
+import Sobre from './page/sobre/SobreNos';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/sobre" element={<SobreNos />} />
+            <Route path="/sobre" element={<Sobre />} />
             <Route path="/" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/doacao" element={<ListaProdutos />} />
