@@ -1,10 +1,11 @@
-import Produtos from "../../model/Produtos";
+import { Link } from "react-router-dom";
+import Produtos from "../../../model/Produtos";
 
 interface ProdutosCardProps {
   produto: Produtos;
 }
 
-function Shop({ produto }: ProdutosCardProps) {
+function CardProdutosAdm({ produto }: ProdutosCardProps) {
   return (
     <div className="bg-white mt-6">
       <div className="mx-auto max-w-2xl  sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -37,21 +38,20 @@ function Shop({ produto }: ProdutosCardProps) {
               <p className="text-xl  text-gray-900 pl-6 pb-9 font-bold">
                 R${produto.preco}
               </p>
+              <div>
+                <Link to={`/produtos/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+                  <button>Editar</button>
+                </Link>
+                <Link to={`/produtos/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+                  <button>Deletar</button>
+                </Link>
+              </div>
             </div>
-            {/* <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 p-2">
-          <button
-            type="submit"
-            className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            Add to bag
-          </button>
-        </div> */}
           </div>
-
         </div>
       </div>
     </div>
   );
 }
 
-export default Shop;
+export default CardProdutosAdm;
