@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react'
-import Categoria from '../../../model/Categoria'
-import { AuthContext } from '../../../contexts/AuthContext';
+import  { ChangeEvent, useContext, useEffect, useState } from 'react'
+import Categorias from '../../model/Categoria'
+import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate, useParams } from 'react-router-dom';
-import { atualizar, buscar, cadastrar } from '../../../services/Service';
+import { atualizar, buscar, cadastrar } from '../../services/Service';
 
 function Categoria() {
-    const [categoria, setCategoria] = useState<Categoria>({} as Categoria);  
+    const [categoria, setCategoria] = useState<Categorias>({} as Categorias);
     const {usuario, handleLogout} = useContext(AuthContext)
     const token = usuario.token
 
@@ -19,16 +19,20 @@ function Categoria() {
 
     async function buscaPorId(id : string) {await buscar(`/categoria/${id}`,setCategoria,{headers:{Authorization:token}})}
 
-    useEffect (() => {if(token===''){alert ("Você não está logado!"); 
-        navigate ('/login');
-            }},[token]);
+    useEffect(() => {
+      if (token === "") {
+        //voltar pro login
+        alert("Ta tirando...");
+        navigate("/login");
+      }
+    }, [ token]);
 
             function atualizarEstado(e : ChangeEvent<HTMLInputElement>){
                 setCategoria ({...categoria, [e.target.name]:e.target.value,})
             }
             async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
                 e.preventDefault();
-            
+
                 if (id !== undefined) {
                   try {
                     await atualizar('/categoria', categoria, setCategoria, {
@@ -65,14 +69,14 @@ function Categoria() {
                   }
                 }
               }
-            
+
         return (
             <>
             <div className="container mx-auto">
               <h1 className="text-center my-8 text-4xl">
                 {id === undefined ? 'Cadastrar nova Categoria' : 'Atualizar Categoria'}
               </h1>
-      
+
               <form onSubmit={gerarNovaCategoria} className="mx-auto w-1/2">
               <div className="flex flex-col gap-2 mb-4">
                   <label htmlFor="descricao">Nome da Categoria</label>

@@ -11,7 +11,10 @@ import { AuthProvider } from './contexts/AuthContext';
 import Cart from './page/cart/Cart';
 import ProdutosOverViews from './page/produtosOverviews/ProdutosOverViews';
 import ListaProdutos from './page/shop/ListaProdutos';
-import Categoria from './admin/produto/categoria/Categoria';
+import Categoria from './admin/categoria/Categoria';
+import "flowbite";
+
+
 
 function App() {
   return (
@@ -28,7 +31,7 @@ function App() {
             <Route path="/doacao" element={<ListaProdutos />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/overviews" element={<ProdutosOverViews />} />
-            <Route path="/cadastrarCategoria" element={<Categoria />} />
+            <Route path="/categoria/cadastrarCategoria" element={<Categoria />} />
           </Routes>
         </div>
         <Footer />

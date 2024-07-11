@@ -5,6 +5,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { cadastrar } from '../../services/Service';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -101,9 +102,7 @@ const Navbar = () => {
           </a>
         </div>
 
-       
         <a
-
           href="/cart"
           className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
           onClick={() => setIsOpen(false)}
@@ -111,13 +110,19 @@ const Navbar = () => {
           Cart
         </a>
         <a
-
           href="/overviews"
           className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
           onClick={() => setIsOpen(false)}
         >
           overviews
         </a>
+        <Link
+          to="/categoria/cadastrarCategoria"
+          className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+
+        >
+          cccd
+        </Link>
       </div>
     </nav>
   );
