@@ -5,6 +5,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { toastAlerta } from "../../utils/ToastAlert";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   function logout() {
     handleLogout();
-    alert("Usuário deslogado com sucesso");
+    toastAlerta("Usuário deslogado com sucesso","sucesso");
     navigate("/");
     setIsOpen(false);
   }

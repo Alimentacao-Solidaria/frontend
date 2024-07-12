@@ -3,6 +3,7 @@ import Categorias from '../../model/Categoria'
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { atualizar, buscar, cadastrar } from '../../services/Service';
+import { toastAlerta } from '../../utils/ToastAlert';
 
 function Categoria() {
   const [categoria, setCategoria] = useState<Categorias>({} as Categorias);
@@ -23,7 +24,7 @@ function Categoria() {
 
   useEffect(() => {
     if (token === '') {
-      alert("Você não está logado!");
+      toastAlerta("Você não está logado!","info");
       navigate('/login');
     }else if (id !== undefined) {
       buscaPorId(id);
@@ -47,14 +48,14 @@ function Categoria() {
             Authorization: token,
           },
         });
-        alert('Categoria atualizada');
+        toastAlerta('Categoria atualizada','sucesso');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('Token vencido, realize o login novamente!');
+          toastAlerta('Token vencido, realize o login novamente!','erro');
           handleLogout();
         } else {
-          alert('Erro ao atualizar a Categoria!');
+          toastAlerta('Erro ao atualizar a Categoria!','erro');
         }
       }
     } else {
@@ -64,14 +65,14 @@ function Categoria() {
             Authorization: token,
           },
         });
-        alert('Categoria cadastrada');
+        toastAlerta('Categoria cadastrada com sucesso','sucesso');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('Token vencido, realize o login novamente!');
+          toastAlerta('Token vencido, realize o login novamente!','erro');
           handleLogout();
         } else {
-          alert('Erro ao cadastrar a Categoria!');
+          toastAlerta('Erro ao cadastrar a Categoria!','erro');
         }
       }
     }
@@ -125,5 +126,5 @@ function Categoria() {
 
 
 
-export default Categoria
+export default Categoria;
 
