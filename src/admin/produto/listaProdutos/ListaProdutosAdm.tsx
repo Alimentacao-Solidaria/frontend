@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Produtos from '../../../model/Produtos';
 import { buscar } from "../../../services/Service";
 import CardProdutosAdm from "../cardProdutos/CardProdutosAdm";
+import { toastAlerta } from "../../../utils/ToastAlert";
 
 
 
@@ -14,7 +15,7 @@ function ListaProdutosAdm() {
        try {
          await buscar("/produtos/todosprodutos", setProdutos, {});
        } catch (error) {
-         alert("Deu ruim");
+         toastAlerta("Deu ruim","erro");
          console.log(error);
        }
      }
