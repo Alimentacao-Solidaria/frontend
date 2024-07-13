@@ -24,15 +24,16 @@ function FormularioProduto() {
     });
 
     const [produtos, setProdutos] = useState<Produtos>({
+      id: 0,
+      nomeProduto: "",
+      descricaoProduto: "",
+      preco: 0,
+      quantidade: 0,
+      foto: "",
+      categoria: {
         id: 0,
-        nomeProduto: '',
-        descricaoProduto: '',
-        preco: 0,
-        quantidade: 0,
-        foto: '',
-        categoria: {
-            id: 0,
-        }
+      },
+      qtd: 0,
     });
 
     async function buscarProdutoPorId(id: string) {

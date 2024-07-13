@@ -9,6 +9,7 @@ interface AuthContextProps {
   handleLogout(): void;
   handleLogin(usuario: UsuarioLogin): Promise<void>;
   isLoading: boolean;
+  circleColor: string;
 }
 
 interface AuthProviderProps {
