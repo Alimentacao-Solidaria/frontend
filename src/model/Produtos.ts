@@ -5,7 +5,9 @@ export default interface Produtos {
   preco: number,
   quantidade: number,
   foto: string
+  usuario: User | null;
   categoria: {
     id: number
   }
+  qts?:  number
 }

@@ -13,21 +13,7 @@ function Home() {
         <Carrossel />
       </div>
 
-      <Link to={'/categoria/cadastrarCategoria'}>
-        <button>cadastrar categoria</button>
-      </Link>
-
-      <Link to={'/categoria'}>
-        <button className="p-8">ver todas as categorias</button>
-      </Link>
-
-      <Link to={'/produtos/cadastrarProduto'}>
-        <button className="p-8">cadastrar produto (somente adm)</button>
-      </Link>
-
-      <Link to={'/produtos'}>
-        <button className="p-6">editar produtos (somente adm)</button>
-      </Link>
+      
 
       <div className="flex flex-col items-center justify-center py-8">
         <h2 className="text-2xl font-bold mb-4">Como Doar</h2>
