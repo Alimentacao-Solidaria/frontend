@@ -38,6 +38,15 @@ function Home() {
             saúde e cuidados essenciais para nossas crianças. Juntos, podemos
             fazer a diferença.
           </p>
+
+          <p className="text-lg leading-relaxed mt-28 text-center">
+            <Link
+              to="/doacao"
+              className="block text-md px-28 py-2 rounded text-blue-900 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700 bg-blue-500"
+            >
+              Doar
+            </Link>
+          </p>
         </div>
         <div className="flex-1">
           <img
