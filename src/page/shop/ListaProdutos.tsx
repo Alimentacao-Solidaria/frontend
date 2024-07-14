@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Produtos from '../../model/Produtos';
 import { buscar } from "../../services/Service";
 import ProdutosCard from "./ProdutosCard";
