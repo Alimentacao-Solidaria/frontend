@@ -19,17 +19,17 @@ function Home() {
             MAIS DE 2.200 CRIANÇAS DE ATÉ CINCO ANOS MORRERAM EM RORAIMA DESDE
             2017
           </h2>
-          <p className="text-lg leading-relaxed mt-10">
+          <p className="text-lg leading-relaxed mt-28">
             Em 2023, a taxa de mortalidade infantil no estado alcançou
             alarmantes <span className="font-bold">32,2%,</span> a maior dos
             últimos sete anos. A principal causa? Falta de acompanhamento
             pré-natal adequado.
           </p>
-          <p className="text-lg leading-relaxed mt-10">
+          <p className="text-lg leading-relaxed mt-28">
             A Maternidade Nossa Senhora de Nazareth e o Hospital da Criança
             Santo Antônio são os que mais registraram óbitos.
           </p>
-          <p className="text-lg leading-relaxed mt-10">
+          <p className="text-lg leading-relaxed mt-28">
             <span className="font-bold">
               Apenas 35% das gestantes mantêm os cuidados necessários,
               resultando em complicações e mortes evitáveis.
@@ -52,31 +52,33 @@ function Home() {
       {/* como doar */}
       <div className="flex flex-col items-center justify-center py-8">
         <h2 className="text-2xl font-bold mb-4">Como Doar</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-28">
           <div className="flex flex-col items-center">
-            <p className="mt-2 text-center font-semibold">
+            <p className="mt-4 text-center font-semibold">
               Escolha os produtos para doar e adicione ao carrinho
             </p>
             <img
               src="https://lh3.googleusercontent.com/pw/AP1GczNKzT6LhfHhUyJ9vfb9573noZR0UrIXXpszQU80DVdVeG7by2n9nGza9jZ2Lev78CPTpynue4JZqZS0nPTpVMYGWrF3i7R9fs_Z5v_j2NaJ_BCgLzx3tNmxB5T47JmE2ViSj0nrZ48fLzCfLTRLmsxJ=w402-h524-s-no-gm?authuser=0"
               alt="Escolher produtos para doar"
-              className="rounded-lg shadow-md w-[400px] h-[300px]"
+              className="rounded-lg shadow-md w-[400px] h-[300px] mt-4"
             />
           </div>
           <div className="flex flex-col items-center">
-            <p className="mt-2 text-center font-semibold">Efetue o pagamento</p>
+            <p className="mt-4 text-center font-semibold">Efetue o pagamento</p>
             <img
               src="https://cdn.awsli.com.br/1946/1946271/arquivos/formas-de-pagamento.jpg"
               alt="Efetuar pagamento"
-              className="rounded-lg shadow-md w-[400px] h-[300px]"
+              className="rounded-lg shadow-md w-[400px] h-[300px] mt-4"
             />
           </div>
-          <div className="flex flex-col items-cente font-semibold">
-            <p className="mt-2 text-center">Nós encaminhamos as doações</p>
+          <div className="flex flex-col items-center">
+            <p className="mt-4 text-center font-semibold">
+              Nós encaminhamos as doações
+            </p>
             <img
               src="https://ampliar.org.br/wp-content/uploads/2020/10/doacao-de-alimentos-salva-vidas-voce-vai-ficar-de-fora.jpg"
               alt="Encaminhar doações"
-              className="rounded-lg shadow-md w-[400px] h-[300px]"
+              className="rounded-lg shadow-md w-[400px] h-[300px] mt-4"
             />
           </div>
         </div>
@@ -89,7 +91,7 @@ function Home() {
         <img
           src="https://lh3.googleusercontent.com/pw/AP1GczMRFABf5GxZy8E7NQD-CuNGNmvE1xfP6kU2V4W50EQvlW6EPLEFRFDvOmoZnfKp2C6RSAsCUI5KXNaAy-6NIMNWkVFW_VlxAA7ckX7vLY4NJvnTC35E2spU_rhKjfIrf_sR36ndsNI2hFI6OWaZv9wv=w1600-h900-s-no-gm?authuser=0"
           alt="Efetuar pagamento"
-          className="rounded-lg shadow-md w-full h-[400px]"
+          className="rounded-lg shadow-md w-full h-[500px]"
         />
       </div>
       {/* sim */}
@@ -99,7 +101,7 @@ function Home() {
         </h2>
       </div>
       <div className="flex items-center text-center justify-center mb-9">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-28">
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className=" relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
               <img
