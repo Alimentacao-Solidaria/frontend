@@ -10,12 +10,12 @@ function Home() {
   return (
     <>
       {/* Carrossel */}
-      <div className="flex items-center justify-center bg-gray-100 py-4">
+      <div className="flex items-center justify-center py-4">
         <Carrossel />
       </div>
 
      {/* Seção de Destaque */}
-<div className="flex flex-col md:flex-row w-full bg-gray-50 p-3 md:p-5 md:py-10 space-y-5 md:space-y-0 items-center">
+<div className="flex flex-col md:flex-row w-full  p-3 md:p-5 md:py-10 space-y-5 md:space-y-0 items-center">
   <div className="flex-1 flex flex-col justify-start md:pr-5 px-3 md:px-5">
     <h2 className="text-3xl font-bold mb-6 text-center md:text-left">
       MAIS DE 2.200 CRIANÇAS DE ATÉ CINCO ANOS MORRERAM EM RORAIMA DESDE 2017
@@ -73,7 +73,7 @@ function Home() {
         </div>
       </div>
      {/* Pilares */}
-  <div className="flex flex-col items-center justify-center py-10 md:py-16 bg-gray-100">
+  <div className="flex flex-col items-center justify-center py-10 md:py-16 ">
     <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center mx-auto">Nossos 3 Pilares na Luta Contra a Mortalidade Infantil</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="max-w-sm rounded overflow-hidden shadow-lg text-center">
