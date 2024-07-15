@@ -21,7 +21,7 @@ function Shop({ produto }: ProdutosCardProps) {
             R${produto.preco}
           </p>
         </div>
-        <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+        <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75 truncate line-clamp-2">
           {produto.descricaoProduto}
         </p>
       </div>
