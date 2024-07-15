@@ -10,39 +10,46 @@ import GabImage from '../../assets/sobre/gabs.jpeg';
 
 const people = [
   {
-    name: 'Mayara Rocha',
-    profession: 'Nutricionista e Desenvolvedora Fullstack',
+    name: "Mayara Rocha",
+    profession: "Nutricionista e Desenvolvedora Fullstack",
     imageSrc: mayImage,
+    urlLink: "https://www.linkedin.com/in/amayararocha/",
   },
   {
-    name: 'Lucas Vinicius',
-    profession: 'Desenvolvedor Fullstack',
+    name: "Lucas Vinicius",
+    profession: "Desenvolvedor Fullstack",
     imageSrc: luImage,
+    urlLink: "https://www.linkedin.com/in/luvigom/",
   },
   {
-    name: 'Giovana Rodrigues',
-    profession: 'Nutricionista e Desenvolvedora Fullstack',
+    name: "Giovana Rodrigues",
+    profession: "Nutricionista e Desenvolvedora Fullstack",
     imageSrc: GiImage,
+    urlLink: "https://www.linkedin.com/in/giovana-rods/",
   },
   {
-    name: 'Ueber James',
-    profession: 'Desenvolvedor Fullstack',
+    name: "Ueber James",
+    profession: "Desenvolvedor Fullstack",
     imageSrc: JamesImage,
+    urlLink: "https://www.linkedin.com/in/ueber-nascimento/",
   },
   {
-    name: 'Daniella Gomes',
-    profession: 'Desenvolvedora Fullstack',
+    name: "Daniella Gomes",
+    profession: "Desenvolvedora Fullstack",
     imageSrc: DaniImage,
+    urlLink: "https://www.linkedin.com/in/gomes-daniella/",
   },
   {
-    name: 'Gabriel Rezende',
-    profession: 'Desenvolvedor Fullstack',
+    name: "Gabriel Rezende",
+    profession: "Desenvolvedor Fullstack",
     imageSrc: GabImage,
+    urlLink: "https://github.com/GabRezende",
   },
   {
-    name: 'Thilliê Moreira',
-    profession: 'Jornalista e Desenvolvedora Fullstack',
+    name: "Thilliê Moreira",
+    profession: "Jornalista e Desenvolvedora Fullstack",
     imageSrc: ThiImage,
+    urlLink: "https://www.linkedin.com/in/thilli%C3%AA-moreira-877633124/",
   },
 ];
 

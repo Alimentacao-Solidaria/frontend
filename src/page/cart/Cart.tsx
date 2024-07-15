@@ -1,7 +1,7 @@
 // Cart.tsx
 
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CarrinhoContext } from "../../contexts/CarrinhoContext";
 import { toastAlerta } from "../../utils/ToastAlert";
 
@@ -12,7 +12,10 @@ function Cart() {
     removerItem,
     diminuirQuantidade,
     adicionarItem,
+    finalizarCompra,
   } = useContext(CarrinhoContext);
+  
+  let navigate = useNavigate();
 
   const handleRemoveFromCart = (produto) => {
     removerItem(produto);
@@ -39,6 +42,12 @@ function Cart() {
   };
 
 
+
+  const handleAddToCart = () => {
+    toastAlerta("Parabens Compra Realizada com Sucesso", "sucesso");
+    finalizarCompra();
+navigate("/")
+  };
 
   return (
     <div className="flex flex-col bg-white shadow-xl h-screen mt-10 overflow-hidden">
@@ -71,7 +80,6 @@ function Cart() {
                             style: "currency",
                             currency: "BRL",
                           }).format(produto.preco * produto.qtd)}
-
                         </p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
@@ -130,12 +138,14 @@ function Cart() {
         </p>
 
         <div className="mt-6">
-          <a
-            href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-500"
+          <button
+
+            type="button"
+            onClick={handleAddToCart}
+            className="flex items-center justify-center rounded-md border w-full border-transparent bg-blue-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-500"
           >
             Finalizar Compra
-          </a>
+          </button>
         </div>
         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
           <Link to="/doacao">

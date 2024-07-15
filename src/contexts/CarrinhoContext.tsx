@@ -10,6 +10,7 @@ interface CarrinhoContextProps {
   aumentarQuantidade: (produto: Produto) => void;
   removerItem: (produto: Produto) => void;
   calcularSubtotal: () => number;
+  finalizarCompra: () => void;
 }
 
 interface CarrinhoProviderProps {
@@ -71,8 +72,9 @@ export function CarrinhoProvider({ children }: CarrinhoProviderProps) {
       return total + item.qtd * item.preco;
     }, 0);
   };
-
-
+  function finalizarCompra() {
+    setListaCarrinho([]);
+  }
   return (
     <CarrinhoContext.Provider
       value={{
@@ -82,6 +84,7 @@ export function CarrinhoProvider({ children }: CarrinhoProviderProps) {
         aumentarQuantidade,
         removerItem,
         calcularSubtotal,
+        finalizarCompra,
       }}
     >
       {children}
