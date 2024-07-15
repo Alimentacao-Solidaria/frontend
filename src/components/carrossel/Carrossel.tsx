@@ -24,7 +24,7 @@ function CustomCarousel() {
       >
         <SwiperSlide>
           <img
-            src="../../assets/logo.png"
+            src="../../../src/assets/test2.jpeg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="Slide 1"
           />
@@ -41,21 +41,21 @@ function CustomCarousel() {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/docs/images/carousel/carousel-3.svg"
+            src="../../../src/assets/test2.jpeg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="Slide 3"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/docs/images/carousel/carousel-4.svg"
+            src="../../../src/assets/test2.jpeg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="Slide 4"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/docs/images/carousel/carousel-5.svg"
+            src="../../../src/assets/test2.jpeg"
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="Slide 5"
           />
