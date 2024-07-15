@@ -12,7 +12,7 @@ function Shop({ produto }: ProdutosCardProps) {
       <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-64">
         <img className="object-cover w-full h-full" src={produto.foto} alt="product image" />
       </div>
-      <div className="p-6">
+      <div className="p-6 flex-1">
         <div className="flex items-center justify-between mb-2">
           <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
             {produto.nomeProduto}

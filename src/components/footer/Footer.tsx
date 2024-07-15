@@ -14,10 +14,10 @@ function Footer() {
     <footer className="bg-gradient-to-r from-white via-[#bce1ff] to-white">
       <div className="w-full px-2 py-1">
         <div className="flex flex-col items-center">
-          <p className="text-sm text-gray-600 mt-1">
+          <p className="text-sm text-slate-700 mt-1 font-semibold">
             Comida, amor & vida - AlimentAção Solidária | Copyright: 2024.
           </p>
-          <p className="text-xs text-gray-600 mt-1">Acesse nossas redes sociais</p>
+          <p className="text-xs text-gray-600 mt-1 font-semibold">Acesse nossas redes sociais</p>
           <div className="flex space-x-3 mt-2 text-gray-600">
             <a
               className="hover:opacity-75"
