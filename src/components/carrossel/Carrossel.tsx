@@ -26,33 +26,33 @@ function CustomCarousel() {
           clickable: true,
         }}
         navigation={true}
-        className="relative h-56 overflow-hidden rounded-lg md:h-96"
+        className="relative w-full h-auto rounded-lg "
       >
         <SwiperSlide>
           <img
             src={carrossel1}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="block w-full h-fit"
             alt="Slide 1"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src={carrossel2}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="block w-full h-fit"
             alt="Slide 2"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src={carrossel3}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="block w-full h-fit"
             alt="Slide 3"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src={carrossel4}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="block w-full h-fit"
             alt="Slide 4"
           />
         </SwiperSlide>
