@@ -1,13 +1,18 @@
 // Cart.tsx
 
 import React, { useContext } from "react";
-import { CarrinhoContext } from "../../contexts/CarrinhoContext";
 import { Link } from "react-router-dom";
+import { CarrinhoContext } from "../../contexts/CarrinhoContext";
 import { toastAlerta } from "../../utils/ToastAlert";
 
 function Cart() {
-  const { listaCarrinho, calcularSubtotal, removerItem, diminuirQuantidade } =
-    useContext(CarrinhoContext);
+  const {
+    listaCarrinho,
+    calcularSubtotal,
+    removerItem,
+    diminuirQuantidade,
+    aumentarQuantidade,
+  } = useContext(CarrinhoContext);
 
   const handleRemoveFromCart = (produto) => {
     removerItem(produto);
@@ -20,14 +25,19 @@ function Cart() {
   };
 
   const handleIncreaseQuantity = (produto) => {
-    // Aumentar a quantidade diretamente pode ser implementado
-    // aqui com a função adicionarItem do contexto se desejado.
-    // adicionarItem(produto);
+    aumentarQuantidade(produto);
     toastAlerta("Quantidade aumentada!", "info");
   };
 
+  const formatarMoeda = (valor) => {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(valor);
+  };
+
   return (
-    <div className="flex flex-col overflow-y-scroll bg-white shadow-xl h-screen mt-10 overflow-hidden">
+    <div className="flex flex-col bg-white shadow-xl h-screen mt-10 overflow-hidden">
       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
         <div className="flex items-start justify-between">
           <h2 className="text-lg font-medium text-gray-900">
@@ -52,7 +62,7 @@ function Cart() {
                     <div>
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <h3>{produto.nomeProduto}</h3>
-                        <p className="ml-4">R${produto.preco}</p>
+                        <p className="ml-4">{formatarMoeda(produto.preco)}</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
                         Quantidade: {produto.qtd}
@@ -62,20 +72,20 @@ function Cart() {
                       <div className="flex">
                         <button
                           type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          className="font-medium text-blue-700 hover:text-blue-500 text-lg p-2"
                           onClick={() => handleDecreaseQuantity(produto)}
                         >
                           -
                         </button>
                         <button
                           type="button"
-                          className="mx-2 font-medium text-indigo-600 hover:text-indigo-500"
+                          className="mx-2 font-medium text-blue-700 hover:text-blue-500 text-lg p-2"
                         >
                           {produto.qtd}
                         </button>
                         <button
                           type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          className="font-medium text-blue-700 hover:text-blue-500 text-lg p-2"
                           onClick={() => handleIncreaseQuantity(produto)}
                         >
                           +
@@ -84,7 +94,7 @@ function Cart() {
                       <div>
                         <button
                           type="button"
-                          className="ml-4 font-medium text-indigo-600 hover:text-indigo-500"
+                          className="ml-4 font-medium text-blue-700 hover:text-blue-500 text-lg p-2"
                           onClick={() => handleRemoveFromCart(produto)}
                         >
                           Remover
@@ -103,7 +113,7 @@ function Cart() {
         {/* Lógica para calcular subtotal, frete, etc. */}
         <div className="flex justify-between text-base font-medium text-gray-900">
           <p>Subtotal</p>
-          R${calcularSubtotal().toFixed(2)}{" "}
+          {formatarMoeda(calcularSubtotal())}
         </div>
         <p className="mt-0.5 text-sm text-gray-500">
           Frete e impostos calculados no checkout.
@@ -112,7 +122,7 @@ function Cart() {
         <div className="mt-6">
           <a
             href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            className="flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-500"
           >
             Finalizar Compra
           </a>
@@ -123,7 +133,7 @@ function Cart() {
               ou{" "}
               <button
                 type="button"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
+                className="font-medium text-blue-700 hover:text-blue-500"
               >
                 Continuar Comprando
                 <span aria-hidden="true"> &rarr;</span>
