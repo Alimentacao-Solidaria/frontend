@@ -62,7 +62,7 @@ function Cart() {
                     <div>
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <h3>{produto.nomeProduto}</h3>
-                        <p className="ml-4">{formatarMoeda(produto.preco)}</p>
+                        <p className="ml-4">{formatarMoeda(produto.preco)} UN</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
                         Quantidade: {produto.qtd}
