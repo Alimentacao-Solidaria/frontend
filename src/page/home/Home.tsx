@@ -12,7 +12,7 @@ import comoDoarImage from '../../../src/assets/comodoar.jpeg';
 import formasDePagamentoImage from '../../../src/assets/formasdepagamento.jpeg';
 import pilar1Image from '../../../src/assets/pilar1.jpeg';
 import pilar2Image from '../../../src/assets/pilar2.jpeg';
-import pilar3Image from '../../../src/assets/pilar3.jpeg';
+import pilar3Image from '../../../src/assets/nosenviamos.jpeg';
 
 function Home() {
   return (
