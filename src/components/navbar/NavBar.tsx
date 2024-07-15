@@ -9,11 +9,6 @@ import { toastAlerta } from "../../utils/ToastAlert";
 
 const Navbar = () => {
 
-
-
-
-
-
   const navigate = useNavigate();
   const { usuario, handleLogout, circleColor } = useContext(AuthContext);
 
@@ -33,7 +28,7 @@ const toggleDropdown = () => {
 
   if (usuario.token !== "") {
     cartComponent = (
-      <div className="flex justify-center text-center">
+      <div className="flex justify-center text-center z-10">
         <div className="relative">
           <button
             className="block h-12 w-12 rounded-full overflow-hidden focus:outline-none text-center"
