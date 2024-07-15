@@ -4,11 +4,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { buscar } from "../../services/Service";
 import { toastAlerta } from "../../utils/ToastAlert";
 import { CarrinhoContext } from "../../contexts/CarrinhoContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function ProdutosOverViews() {
   const [produto, setProduto] = useState<Produto>({} as Produto);
   let navigate = useNavigate();
   const { adicionarItem } = useContext(CarrinhoContext);
+  const { usuario } = useContext(AuthContext)
+  const token = usuario.token
 
   const { id } = useParams<{ id: string }>();
 
@@ -28,10 +31,19 @@ function ProdutosOverViews() {
     }
   }, [id]);
 
-   const handleAddToCart = () => {
-     adicionarItem(produto);
-     toastAlerta("Produto adicionado ao carrinho!", "sucesso");
-   };
+  const handleAddToCart = () => {
+    if (token !== '') {
+       adicionarItem(produto);
+       toastAlerta("Produto adicionado ao carrinho!", "sucesso");
+    } else {
+      toastAlerta("Precisar esta logado para poder adicionar itens no Carrinho", "erro")
+      navigate("/login")
+     }
+
+  };
+
+  
+
 
   return (
     <section className="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased mt-20 text-center">
@@ -143,7 +155,7 @@ function ProdutosOverViews() {
               {produto.descricaoProduto}
             </p>
 
-            
+
           </div>
         </div>
       </div>

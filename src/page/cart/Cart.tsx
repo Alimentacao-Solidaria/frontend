@@ -11,7 +11,7 @@ function Cart() {
     calcularSubtotal,
     removerItem,
     diminuirQuantidade,
-    aumentarQuantidade,
+    adicionarItem,
   } = useContext(CarrinhoContext);
 
   const handleRemoveFromCart = (produto) => {
@@ -25,7 +25,9 @@ function Cart() {
   };
 
   const handleIncreaseQuantity = (produto) => {
-    aumentarQuantidade(produto);
+    // Aumentar a quantidade diretamente pode ser implementado
+    // aqui com a função adicionarItem do contexto se desejado.
+     adicionarItem(produto);
     toastAlerta("Quantidade aumentada!", "info");
   };
 
@@ -35,6 +37,8 @@ function Cart() {
       currency: "BRL",
     }).format(valor);
   };
+
+
 
   return (
     <div className="flex flex-col bg-white shadow-xl h-screen mt-10 overflow-hidden">
@@ -62,7 +66,13 @@ function Cart() {
                     <div>
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <h3>{produto.nomeProduto}</h3>
-                        <p className="ml-4">{formatarMoeda(produto.preco)} UN</p>
+                        <p className="ml-4">
+                          {new Intl.NumberFormat("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                          }).format(produto.preco * produto.qtd)}
+
+                        </p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
                         Quantidade: {produto.qtd}

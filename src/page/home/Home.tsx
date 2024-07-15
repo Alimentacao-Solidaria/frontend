@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
       {/* Carrossel */}
-      <div className="flex items-center justify-center py-4">
+      <div className="flex items-center justify-center py-4 ">
         <Carrossel />
       </div>
 
