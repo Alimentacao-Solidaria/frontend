@@ -71,7 +71,7 @@ function Cart() {
                             style: "currency",
                             currency: "BRL",
                           }).format(produto.preco * produto.qtd)}
-                          
+
                         </p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
