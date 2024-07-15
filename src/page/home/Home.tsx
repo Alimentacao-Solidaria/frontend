@@ -12,7 +12,6 @@ function Home() {
       <div className=" items-center justify-center">
         <Carrossel />
       </div>
-      {/* dive texto */}
       <div className="flex w-full h-screen bg-gray-50 p-10">
         <div className="flex-1 flex flex-col justify-start pr-5">
           <h2 className="text-3xl font-bold mb-4 text-center">
