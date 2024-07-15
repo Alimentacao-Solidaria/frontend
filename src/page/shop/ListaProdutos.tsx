@@ -24,7 +24,7 @@ function ListaProdutos() {
       buscarProdutos();
     }, [produto.length]);
     return (
-      <div className=" container mx-auto my-4 gap-3 grid  sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-1   ">
+      <div className="flex flex-wrap justify-center gap-4 px-6 mt-10 mb-10">
         {produto.map((produtos) => (
           <ProdutosCard key={produtos.id} produto={produtos} />
         ))}

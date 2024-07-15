@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Logo from "../../assets/test2.jpeg";
+import Logo from "../../assets/logo.jpeg";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 // import { ShoppingBagIcon } from "@heroicons/react/24/outline";
@@ -8,11 +8,6 @@ import { useContext } from "react";
 import { toastAlerta } from "../../utils/ToastAlert";
 
 const Navbar = () => {
-
-
-
-
-
 
   const navigate = useNavigate();
   const { usuario, handleLogout, circleColor } = useContext(AuthContext);
@@ -33,7 +28,7 @@ const toggleDropdown = () => {
 
   if (usuario.token !== "") {
     cartComponent = (
-      <div className="flex justify-center text-center">
+      <div className="flex justify-center text-center z-10">
         <div className="relative">
           <button
             className="block h-12 w-12 rounded-full overflow-hidden focus:outline-none text-center"
@@ -101,9 +96,11 @@ const toggleDropdown = () => {
         <div className="flex items-center justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-b-2 border-gray-300 pb-5 lg:pb-0">
           <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
             <img className="h-10 w-10 rounded-full" src={Logo} alt="Logo" />
-            <span className="font-semibold text-xl tracking-tight ml-2">
-              Alimentação Solidária
-            </span>
+            <Link to="/home">
+              <span className="font-semibold text-xl tracking-tight ml-2">
+                Alimentação Solidária
+              </span>
+            </Link>
           </div>
           <div className="block lg:hidden">
             <button
@@ -149,18 +146,8 @@ const toggleDropdown = () => {
             >
               Doações
             </Link>
-
-
           </div>
           {loginCadastroComponent}
-
-          {/* <a
-          href="/cart"
-          className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
-          onClick={() => setIsOpen(false)}
-        >
-          Cart
-        </a> */}
           {cartComponent}
         </div>
       </nav>
