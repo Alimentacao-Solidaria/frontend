@@ -9,10 +9,10 @@ import "slick-carousel/slick/slick-theme.css"; // Importando tema do Slick Carou
 // Importando as imagens
 import criancasImage from '../../../src/assets/criancas.jpeg';
 import comoDoarImage from '../../../src/assets/comodoar.jpeg';
-import formasDePagamentoImage from '../../../src/assets/formasdepagamento.jpeg';
+import formasDePagamentoImage from '../../../src/assets/nosenviamos.jpeg'
 import pilar1Image from '../../../src/assets/pilar1.jpeg';
 import pilar2Image from '../../../src/assets/pilar2.jpeg';
-import pilar3Image from '../../../src/assets/nosenviamos.jpeg';
+import pilar3Image from '../../../src/assets/pilar3.jpeg';
 
 function Home() {
   return (
