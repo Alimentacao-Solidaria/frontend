@@ -8,9 +8,9 @@ import "slick-carousel/slick/slick-theme.css"; // Importando tema do Slick Carou
 
 // Importando as imagens
 import criancasImage from '../../../src/assets/criancas.jpeg';
-import comoDoarImage from '../../../src/assets/comodoar.jpeg';
-import formasDePagamentoImage from '../../../src/assets/formasdepagamento.jpeg';
-import nosEnviamos from '../../../src/assets/nosenviamos.jpeg'
+import comoDoarImage from '../../../src/assets/comodoar.jpg';
+import formasDePagamentoImage from '../../../src/assets/formasdepagamento.jpg';
+import nosEnviamos from '../../../src/assets/nosenviamos.jpg'
 import pilar1Image from '../../../src/assets/pilar1.jpeg';
 import pilar2Image from '../../../src/assets/pilar2.jpeg';
 import pilar3Image from '../../../src/assets/pilar3.jpeg';
@@ -26,7 +26,7 @@ function Home() {
       {/* Seção de Destaque */}
       <div className="flex flex-col md:flex-row w-full  p-3 md:p-5 md:py-10 space-y-5 md:space-y-0 items-center">
         <div className="flex-1 flex flex-col justify-start md:pr-5 px-3 md:px-5">
-          <h2 className="text-3xl font-bold mb-6 text-center md:text-left">
+          <h2 className="text-3xl font-bold mb-6 text-center md:text-left text-red-700">
             MAIS DE 2.200 CRIANÇAS DE ATÉ CINCO ANOS MORRERAM EM RORAIMA DESDE 2017
           </h2>
           <p className="text-lg leading-relaxed mt-4 text-justify">
@@ -52,7 +52,7 @@ function Home() {
 
       {/* Como Doar */}
       <div className="flex flex-col items-center justify-center py-10 bg-gray-100">
-        <h2 className="text-3xl font-bold mb-8">COMO DOAR</h2>
+        <h2 className="text-3xl font-bold mb-8">Como posso Doar?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
           <div className="flex flex-col items-center text-center">
             <img
@@ -61,7 +61,7 @@ function Home() {
               className="rounded-lg shadow-md w-2/3 h-auto object-cover"
             />
             <p className="mt-2 font-semibold">
-              Escolha os produtos para doar e adicione ao carrinho
+              Escolha os produtos e adicione ao carrinho
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -78,7 +78,7 @@ function Home() {
               alt="Encaminhar doações"
               className="rounded-lg shadow-md w-2/3 h-auto object-cover"
             />
-            <p className="mt-2 font-semibold">Nós encaminhamos as doações</p>
+            <p className="mt-2 font-semibold">Nós enviamos suas doações</p>
           </div>
         </div>
       </div>

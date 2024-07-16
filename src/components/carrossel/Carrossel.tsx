@@ -6,10 +6,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Importando as imagens
-import carrossel1 from '../../../src/assets/carrossel1.jpeg';
-import carrossel2 from '../../../src/assets/carrossel2.jpeg';
-import carrossel3 from '../../../src/assets/carrossel3.jpeg';
-import carrossel4 from '../../../src/assets/carrossel4.jpeg';
+import carrossel1 from '../../../src/assets/carrossel1.jpg';
+import carrossel2 from '../../../src/assets/carrossel2.jpg';
+import carrossel3 from '../../../src/assets/carrossel3.jpg';
+import carrossel4 from '../../../src/assets/carrossel4.jpg';
 
 function CustomCarousel() {
   return (

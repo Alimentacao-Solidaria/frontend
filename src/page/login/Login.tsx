@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import UsuarioLogin from "../../model/UsuarioLogin";
 import { RotatingLines } from "react-loader-spinner";
+import loginBackground from '../../assets/background.png'
 
 function Login() {
   const navigate = useNavigate();
@@ -28,7 +29,14 @@ function Login() {
   }
 
   return (
-    <div className="flex h-screen items-center">
+    <div
+      className="flex h-screen items-center justify-center"
+      style={{
+        backgroundImage: `url(${loginBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="relative flex w-full max-w-sm mx-auto flex-col space-y-3 space-x-2 rounded-lg border bg-white px-9 py-10 shadow-xl">
         <div className="-z-10 absolute top-5 left-1/2 h-full w-5/6 -translate-x-1/2 rounded-lg bg-blue-100 sm:-right-5 sm:top-5 sm:left-auto sm:w-full sm:translate-x-0"></div>
         <div className="mx-auto mb-2 space-y-3">

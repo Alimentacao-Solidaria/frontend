@@ -73,14 +73,14 @@ const toggleDropdown = () => {
       <div>
         <Link
           to="/login"
-          className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+          className="block text-md px-4 py-2 rounded text-[#0EA5E9] font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-[#0EA5E9]"
           onClick={() => setIsOpen(false)}
         >
           Login
         </Link>
         <Link
           to="/cadastro"
-          className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+          className="block text-md px-4 py-2 rounded text-[#0EA5E9] font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-[#0EA5E9]"
           onClick={() => setIsOpen(false)}
         >
           Cadastro
@@ -97,7 +97,7 @@ const toggleDropdown = () => {
           <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
             <img className="h-10 w-10 rounded-full" src={Logo} alt="Logo" />
             <Link to="/home">
-              <span className="font-semibold text-xl tracking-tight ml-2">
+              <span className="font-semibold text-xl tracking-tight ml-3 text-[#0EA5E9]">
                 Alimentação Solidária
               </span>
             </Link>
@@ -128,21 +128,21 @@ const toggleDropdown = () => {
           <div className="text-md font-bold text-blue-700 lg:flex-grow">
             <Link
               to="/"
-              className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+              className="block text-md px-4 py-2 rounded text-[#0EA5E9] font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-[#0EA5E9]"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/sobre"
-              className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+              className="block text-md px-4 py-2 rounded text-[#0EA5E9] font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-[#0EA5E9]"
               onClick={() => setIsOpen(false)}
             >
               Sobre
             </Link>
             <Link
               to="/doacao"
-              className="block text-md px-4 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-blue-700"
+              className="block text-md px-4 py-2 rounded text-[#0EA5E9] font-bold hover:text-white mt-4 lg:inline-block lg:mt-0 hover:bg-[#0EA5E9]"
             >
               Doações
             </Link>
