@@ -93,10 +93,7 @@ function Categoria() {
 
     return (
       <>
-
-
         <div className="container mx-auto">
-
           <h1 className="text-center my-8 text-4xl">
             {id === undefined
               ? "Cadastrar nova Categoria"
@@ -131,7 +128,7 @@ function Categoria() {
               />
             </div>
             <button
-              className="bg-indigo-400 hover:bg-indigo-800 rounded-lg w-1/2 mx-auto block py-2 text-white"
+              className="bg-[#0EA5E9] hover:bg-indigo-800 rounded-lg w-1/2 mx-auto block py-2 text-white"
               type="submit"
             >
               {id === undefined ? "Cadastrar" : "Atualizar"}
