@@ -93,6 +93,7 @@ const Sobre: React.FC = () => {
                   name={person.name}
                   profession={person.profession}
                   imageSrc={person.imageSrc}
+                  urlLink={person.urlLink}
                 />
               ))}
             </div>
