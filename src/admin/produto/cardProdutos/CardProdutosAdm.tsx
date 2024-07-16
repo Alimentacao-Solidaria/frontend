@@ -7,7 +7,7 @@ interface ProdutosCardProps {
 
 function CardProdutosAdm({ produto }: ProdutosCardProps) {
   return (
-    <div className="bg-white mt-6">
+    <div className="bg-white mt-6 ">
       <div className="mx-auto max-w-2xl  sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div>
           <div

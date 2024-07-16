@@ -141,8 +141,8 @@ function FormularioProduto() {
     const carregandoCategoria = categoria.descricaoCategoria === '';
 
     return (
-      <div className="container flex flex-col mx-auto items-center">
-        <h1 className="text-4xl text-center my-8">
+      <div className="container flex flex-col mx-auto items-center mb-11">
+        <h1 className="text-4xl text-center my-8 ">
           {id !== undefined ? "Editar Produto" : "Cadastrar Produto"}
         </h1>
 
@@ -177,7 +177,7 @@ function FormularioProduto() {
               className="border-2 border-slate-700 rounded p-2"
             />
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <label htmlFor="preco">Preço do Produto</label>
             <input
               value={produtos.preco}
@@ -192,7 +192,7 @@ function FormularioProduto() {
               className="border-2 border-slate-700 rounded p-2"
             />
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <label htmlFor="quantidade">Quantidade do Produto em Estoque</label>
             <input
               value={produtos.quantidade}
