@@ -95,7 +95,9 @@ function Categoria() {
       <>
         <div className="container mx-auto">
           <h1 className="text-center my-8 text-4xl">
-            {id === undefined ? 'Cadastrar nova Categoria' : 'Atualizar Categoria'}
+            {id === undefined
+              ? "Cadastrar nova Categoria"
+              : "Atualizar Categoria"}
           </h1>
 
           <form onSubmit={gerarNovaCategoria} className="mx-auto w-1/2">
@@ -105,7 +107,7 @@ function Categoria() {
                 type="text"
                 className="border-2 border-slate-700 rounded-lg p-2"
                 id="descricao"
-                name="descricao"
+                name="nomeCategoria"
                 value={categoria.nomeCategoria}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   atualizarEstado(e)
@@ -118,7 +120,7 @@ function Categoria() {
                 type="text"
                 className="border-2 border-slate-700 rounded-lg p-2"
                 id="descricao"
-                name="descricao"
+                name="descricaoCategoria"
                 value={categoria.descricaoCategoria}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   atualizarEstado(e)
@@ -129,12 +131,12 @@ function Categoria() {
               className="bg-indigo-400 hover:bg-indigo-800 rounded-lg w-1/2 mx-auto block py-2 text-white"
               type="submit"
             >
-              {id === undefined ? 'Cadastrar' : 'Atualizar'}
+              {id === undefined ? "Cadastrar" : "Atualizar"}
             </button>
           </form>
         </div>
       </>
-    )
+    );
   }
 
 
