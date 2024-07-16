@@ -1,5 +1,6 @@
 import {
   FacebookLogo,
+  GithubLogo,
   InstagramLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react";
@@ -17,40 +18,18 @@ function Footer() {
           <p className="text-sm text-slate-700 mt-1 font-semibold">
             Comida, amor & vida - AlimentAção Solidária | Copyright: 2024.
           </p>
-          <p className="text-xs text-slate-700 mt-2 font-semibold">Acesse nossas redes sociais</p>
+          <p className="text-xs text-slate-700 mt-2 font-semibold">
+            Acesse nosso GitHub
+          </p>
           <div className="flex space-x-3 mt-2 text-gray-600">
             <a
               className="hover:opacity-75"
-              href="#"
+              href="https://github.com/Alimentacao-Solidaria/frontend"
               target="_blank"
               rel="noreferrer"
             >
-              <span className="sr-only">LinkedIn</span>
-              <LinkedinLogo
-                size={23}
-                className="text-gray-600 hover:text-gray-800 cursor-pointer"
-              />
-            </a>
-            <a
-              className="hover:opacity-75"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="sr-only">Instagram</span>
-              <InstagramLogo
-                size={23}
-                className="text-gray-600 hover:text-gray-800 cursor-pointer"
-              />
-            </a>
-            <a
-              className="hover:opacity-75"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="sr-only">Facebook</span>
-              <FacebookLogo
+              <span className="sr-only">GitHub</span>
+              <GithubLogo
                 size={23}
                 className="text-gray-600 hover:text-gray-800 cursor-pointer"
               />
@@ -71,12 +50,16 @@ function Footer() {
                 </div>
                 <div>
                   <Link to={"/produtos/cadastrarProduto"}>
-                    <button className="btn">Cadastrar Produto (Somente Adm)</button>
+                    <button className="btn">
+                      Cadastrar Produto (Somente Adm)
+                    </button>
                   </Link>
                 </div>
                 <div>
                   <Link to={"/produtos"}>
-                    <button className="btn">Editar Produtos (Somente Adm)</button>
+                    <button className="btn">
+                      Editar Produtos (Somente Adm)
+                    </button>
                   </Link>
                 </div>
               </div>

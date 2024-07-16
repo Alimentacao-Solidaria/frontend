@@ -39,10 +39,16 @@ function CardProdutosAdm({ produto }: ProdutosCardProps) {
                 R${produto.preco}
               </p>
               <div>
-                <Link to={`/produtos/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+                <Link
+                  to={`/produtos/editarProduto/${produto.id}`}
+                  className="w-full text-white bg-[#0EA5E9] hover:bg-indigo-800 flex items-center justify-center py-2"
+                >
                   <button>Editar</button>
                 </Link>
-                <Link to={`/produtos/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+                <Link
+                  to={`/produtos/deletarProduto/${produto.id}`}
+                  className="text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center"
+                >
                   <button>Deletar</button>
                 </Link>
               </div>

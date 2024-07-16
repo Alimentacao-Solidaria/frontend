@@ -93,7 +93,10 @@ function Categoria() {
 
     return (
       <>
+
+
         <div className="container mx-auto">
+
           <h1 className="text-center my-8 text-4xl">
             {id === undefined
               ? "Cadastrar nova Categoria"
